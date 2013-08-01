@@ -11,22 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
+<div class="field">
+      <%= f.label "Tipo de crimen" %>
+      <%= f.select :tipo, [['Mano Armada'],['Paseo Millonario'], ['Fleteo (robo a la salida de una identidad bancaria)  '], ['Carterista'], ['Asalto con Arma Blanca'], ['Extorsion'], ['Otro']], :include_blank => true %> 
+</div>
+
+<div class="field">
+      <%= f.label "Barrio" %>
+      <%= f.select :neighborhood, [['Antonio Nariño'], ['Barrios Unidos'], ['Bosa'], ['Candelaria'], ['Chapinero'], ['Ciudad Bolívar'],['Engativá'],['Fontibón'],['Kennedy'],['Mártires'],['Puente Aranda'],['Rafael Uribe'],['San Cristóbal'],['Santa Fe'],['Suba'],['Teusaquillo'],['Tunjuelito'],['Usaquén']], :include_blank => true %> 
+</div>
+<div class="field">
+      <%= f.label "Lugar" %>
+      <%= f.text_field :address, placeholder: "Ejemplo: Calle 64 con Carrera 7a" %>
+</div>
+
+<div class="field field_date">
+  <%= f.label "Fecha" %>
+  <%= f.date_select :date, ampm: true, :start_year => Date.current.year, :end_year => Date.current.year + 2, order: [:day, :month, :year]  %>
+</div>
+
+<div class="field">
+      <%= f.label "Descripción"%>
+      <%= f.text_area :description, placeholder: "Cuéntanos: ¿qué te pasó?", :rows => "7"%>
+</div>
+
   <div class="field">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
@@ -35,7 +43,8 @@
     <%= f.label :longitude %><br />
     <%= f.text_field :longitude %>
   </div>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Reportar", class: "btn btn-large btn-primary" %>
   </div>
 <% end %>
