@@ -4,6 +4,13 @@ Safetest4::Application.routes.draw do
 
   resources :charaters
 
+  root :to => 'charaters#index'
+
+
+  match '/reports', to: 'charaters#new'
+  match '/feed', to: 'charaters#feed'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
