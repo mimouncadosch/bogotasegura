@@ -29,6 +29,8 @@ group :assets do
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
   gem 'therubyracer', '~> 0.10.2', :platforms => :ruby
+  gem "less-rails-bootstrap"
+  gem "less-rails"
   gem "twitter-bootstrap-rails"
   gem 'ransack'
   
