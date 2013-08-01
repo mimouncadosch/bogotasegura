@@ -36,14 +36,14 @@
 </div>
 
   <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
+    <%= f.label :latitude%><br />
+    <%= f.text_field :latitude, :id=>"latitude" %>
   </div>
   <div class="field">
     <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
+    <%= f.text_field :longitude, :id=>"longitude"%>
   </div>
-  
+
   <div class="actions">
     <%= f.submit "Reportar", class: "btn btn-large btn-primary" %>
   </div>
