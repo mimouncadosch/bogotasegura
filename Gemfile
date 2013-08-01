@@ -8,9 +8,9 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem "geocoder"
 gem "bcrypt-ruby", '3.0.1'
 gem "lunchy"
+gem "less-rails"
 gem 'therubyracer', '~> 0.10.2', :platforms => :ruby
 gem "less-rails-bootstrap"
-gem "less-rails"
 gem "twitter-bootstrap-rails"
 
 # Bundle edge Rails instead:
