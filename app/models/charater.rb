@@ -5,7 +5,7 @@ class Charater < ActiveRecord::Base
                   :address => "address", :normalized_address => "address",
                   :msg => "Sorry, not even Google could figure out where that is"
 
-def gmaps4rails_address
-  address
-
+  def gmaps4rails_address
+    address
+  end
 end
