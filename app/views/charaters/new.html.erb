@@ -1,5 +1,307 @@
-<h1>New charater</h1>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head> 
+<script>
 
-<%= render 'form' %>
+      var map;
+      var antonio_narino = new google.maps.LatLng(4.589258, -74.103227);
 
-<%= link_to 'Back', charaters_path %>
+      var barrios_unidos = new google.maps.LatLng(4.679257, -74.078608);
+
+      var bosa = new google.maps.LatLng(4.620229, -74.189672);
+
+      var candelaria = new google.maps.LatLng(4.586349, -74.157429);
+
+      var chapinero = new google.maps.LatLng(4.652396, -74.062672);
+
+      var ciudad_bolivar = new google.maps.LatLng(4.543228,-74.137516);
+
+      var engativa = new google.maps.LatLng(4.702012,-74.112082);
+
+      var fontibon = new google.maps.LatLng(4.682337,-74.140234);
+
+      var kennedy = new google.maps.LatLng(4.64692,-74.152937);
+
+      var martires = new google.maps.LatLng(4.606369,-74.08958);
+
+      var puente_aranda = new google.maps.LatLng(4.616978,-74.106588);
+
+      var rafael_uribe = new google.maps.LatLng(4.657015,-74.069016);
+
+      var san_cristobal = new google.maps.LatLng(4.568554,-74.083586);
+
+      var santa_fe = new google.maps.LatLng(4.599867,-74.040842);
+
+      var suba = new google.maps.LatLng(4.762573,-74.087391);
+
+      var teusaquillo = new google.maps.LatLng(4.648289,-74.083242);
+
+      var tunjuelito = new google.maps.LatLng(4.589429,-74.13168);
+
+      var usaquen = new google.maps.LatLng(4.744097,-74.01804);
+
+      var myCenter = new google.maps.LatLng(4.5981,-74.0758);
+
+      function initialize() {
+        var mapOptions = {
+          zoom: 15,
+          center: myCenter,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+       google.maps.event.addListener(map, 'click', function(event) {
+          placeMarker(event.latLng);
+      document.getElementById("latitude").value = event.latLng.lat();
+      document.getElementById("longitude").value = event.latLng.lng();        
+        });
+
+      var markers = [];
+      var barrio = "/assets/barrio.png"
+      var marker0 = new google.maps.Marker({
+          position: myCenter,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker1 = new google.maps.Marker({
+          position: antonio_narino,
+          map: map,
+          title:"Hello World!",
+          icon: barrio,
+      });
+      var marker2 = new google.maps.Marker({
+          position: barrios_unidos,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker3 = new google.maps.Marker({
+          position: bosa,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker4 = new google.maps.Marker({
+          position: candelaria,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker5 = new google.maps.Marker({
+          position: chapinero,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker6 = new google.maps.Marker({
+          position: ciudad_bolivar,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker7 = new google.maps.Marker({
+          position: engativa,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker8 = new google.maps.Marker({
+          position: fontibon,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker9 = new google.maps.Marker({
+          position: kennedy,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker10 = new google.maps.Marker({
+          position: martires,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker11 = new google.maps.Marker({
+          position: puente_aranda,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker12 = new google.maps.Marker({
+          position: rafael_uribe,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker13 = new google.maps.Marker({
+          position: san_cristobal,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker14 = new google.maps.Marker({
+          position: santa_fe,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker15 = new google.maps.Marker({
+          position: suba,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker16 = new google.maps.Marker({
+          position: teusaquillo,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker17 = new google.maps.Marker({
+          position: tunjuelito,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      var marker18 = new google.maps.Marker({
+          position: usaquen,
+          map: map,
+          title:"Hello World!",
+          icon: barrio
+      });
+      markers.push(marker1);
+      markers.push(marker2);
+
+      // Add listener for a click on the pin
+      google.maps.event.addListener(marker1, 'click', function() {
+          infowindow1.open(map, marker1);
+      });
+      google.maps.event.addListener(marker2, 'click', function() {
+          infowindow2.open(map, marker2);
+      });
+
+      // Add information window
+      var infowindow1 = new google.maps.InfoWindow({
+          content:  createInfo('Evoluted New Media', 'Ground Floor,35 Lambert Street,Sheffield, South Yorkshire, S3 7BH<a title="Click to view our website" href="http://www.evoluted.net">Our Website</a>')
+      });
+
+      var infowindow2 = new google.maps.InfoWindow({
+        content:  createInfo('Another Address', '60 Lambert Street,Sheffield,South Yorkshire,S3 7BH<a title="Click to view our website" href="http://www.evoluted.net">Our Website</a>')
+    });
+
+      }
+
+      function placeMarker(location) {
+        var marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          position: location
+        });
+        
+        var latitude = location.lat();
+        var longitude = location.lng();
+        var infowindow = new google.maps.InfoWindow({
+          content: "Gracias por reportar"
+        });
+        infowindow.open(map,marker);
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+      // Create information window
+    function createInfo(title, content) {
+        return '<div class="infowindow"><strong>'+ title +'</strong>'+content+'</div>';
+    }
+    
+    // select a marker from dropdown menu
+    $(document).ready(function() { 
+    $("select#mySelect").change(function(){ 
+      
+        var latLngString = $(this).val();
+        var latLngArray = latLngString.split(",");
+        var latLng = new google.maps.LatLng(latLngArray[0], latLngArray[1]);
+        map.panTo(latLng);    
+    });
+     });
+</script>
+<!-- End of Google Map -->
+
+<!-- Modal for choosing neighborhood -->
+ <!--  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Escoje el barrio</h4>
+        </div>
+        <div class="modal-body">
+          <%= render 'barrioslist' %>
+        </div>
+    </div>
+  </div>
+<!-- End of Modal -->
+
+<div class="accordion accordion_report" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        Haz click en el mapa en el lugar del crimen o delito
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <%= render 'barrioslist' %>
+        <!-- Map -->
+          <div id="map-canvas" class="span8" mrel="tooltip" data-placement="right" data-animation="true" title="Haz click en el lugar del crimen/delito"></div>
+          <style>
+          img{max-width: none;} 
+          #map-canvas {
+          height: 450px;
+          width: 80%;
+          margin-left: 10%;
+          margin-right: 20%;
+          }
+          </style>
+        <!-- End of Map -->      
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        Completa los campos siguientes
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+      Su información (opcional)
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <%= form_for(@charater) do |f| %>
+        <%= f.text_field :name, placeholder: "Nombre..."%>
+        <%= f.text_field :cedula, placeholder: "Cédula..."%> 
+      <% end %>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+
+
