@@ -1,8 +1,8 @@
 class Charater < ActiveRecord::Base
   attr_accessible :address, :date, :latitude, :longitude, :name, :tipo, :name, :description, :cedula, :neighborhood
 
-  acts_as_gmappable :latitude => 'lat', :longitude => 'lng',
-                  :msg => "Sorry, not even Google could figure out where that is"
+  # acts_as_gmappable :latitude => 'lat', :longitude => 'lng',
+  #                 :msg => "Sorry, not even Google could figure out where that is"
 
 def gmaps4rails_infowindow  
     "<h5>#{tipo}</h5>"+
