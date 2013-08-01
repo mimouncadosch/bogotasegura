@@ -37,7 +37,4 @@
 
 <%= link_to 'New Charater', new_charater_path %>
 
-<%= gmaps(:map_options => { :id => "configuration_map" },
-          :markers => { "data" => @json, "options" => {"list_container" => "markers_list"     }},
-          :scripts => :none,
-          :last_map => false) %>
+<%= gmaps4rails(@json) %>
