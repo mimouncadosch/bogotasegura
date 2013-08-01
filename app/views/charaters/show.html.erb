@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @charater.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @charater.date %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @charater.tipo %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @charater.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @charater.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @charater.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_charater_path(@charater) %> |
+<%= link_to 'Back', charaters_path %>

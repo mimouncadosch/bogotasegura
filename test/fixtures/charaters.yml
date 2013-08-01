@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  date: 2013-08-01
+  tipo: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  name: MyString
+  date: 2013-08-01
+  tipo: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
