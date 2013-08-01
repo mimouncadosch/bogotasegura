@@ -3,7 +3,6 @@ class CharatersController < ApplicationController
   # GET /charaters.json
   def index
     @charaters = Charater.all
-    
     @json = Charater.all.to_gmaps4rails
     
     respond_to do |format|
@@ -16,7 +15,6 @@ class CharatersController < ApplicationController
   # GET /charaters/1.json
   def show
     @charater = Charater.find(params[:id])
-    @json = Charater.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb
@@ -28,7 +26,6 @@ class CharatersController < ApplicationController
   # GET /charaters/new.json
   def new
     @charater = Charater.new
-    @json = Charater.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # new.html.erb
@@ -84,17 +81,4 @@ class CharatersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def feed
-    @charaters = Charater.all
-    @charaters = Charater.paginate(:page => params[:page], :per_page=>6, :order => 'created_at DESC') 
-    @json = Charater.all.to_gmaps4rails do |charater, marker|      
-      marker.infowindow render_to_string(:partial => "/_form.html.erb", :locals => { :object => charater})
-    end
-    @json = Charater.all.to_gmaps4rails
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @charaters }
-    end
- end
 end
