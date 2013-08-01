@@ -3,7 +3,7 @@ class CharatersController < ApplicationController
   # GET /charaters.json
   def index
     @charaters = Charater.all
-
+    @json = Charater.all.to_gmaps4rails
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @charaters }

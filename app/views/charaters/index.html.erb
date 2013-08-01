@@ -31,3 +31,5 @@
 <br />
 
 <%= link_to 'New Charater', new_charater_path %>
+
+<%= gmaps("auto_adjust" => "true", "markers" => {"data" => @json }) %>
