@@ -2,9 +2,10 @@ Safetest4::Application.routes.draw do
   resources :subscribers
 
 
+  get "/" => 'charaters#index', :as => 'root'
+
   resources :charaters
 
-  root to: 'subscribers#new'
 
 
   match '/reports', to: 'charaters#new'
