@@ -1,4 +1,4 @@
-.map_container {
+.map_container{
   padding: 6px;
   border-width: 0px;
   border-style: none;
@@ -26,3 +26,5 @@
    border:#555555 2px solid;
 }
 
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
