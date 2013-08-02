@@ -1,4 +1,4 @@
-.map_container {
+.map_container img{max-width: none;}{
   padding: 6px;
   border-width: 0px;
   border-style: none;
@@ -12,8 +12,8 @@
 .gmaps4rails_map {
   width: 150%;
   height: 500px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
