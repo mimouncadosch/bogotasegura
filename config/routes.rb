@@ -4,13 +4,12 @@ Safetest4::Application.routes.draw do
 
   resources :charaters
 
-  root :to => 'charaters#new'
+  root to: 'charaters#index'
 
 
   match '/reports', to: 'charaters#new'
   match '/feed', to: 'charaters#feed'
   match '/about', to: 'subscribers#new'
-  match '/', to: 'charaters#index '
 
 
 
