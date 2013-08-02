@@ -45,7 +45,7 @@ class CharatersController < ApplicationController
 
     respond_to do |format|
       if @charater.save
-        format.html { redirect_to @charater, notice: 'Charater was successfully created.' }
+        format.html { redirect_to @charater, notice: 'Su reporte ha sido registrado. Gracias por reportar con nosotros!' }
         format.json { render json: @charater, status: :created, location: @charater }
       else
         format.html { render action: "new" }
