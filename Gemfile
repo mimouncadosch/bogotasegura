@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem "gmaps4rails"
-gem 'bootstrap-sass', '2.2.2.0'
+gem "bootstrap-sass", "2.3.1.0"
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "geocoder"
