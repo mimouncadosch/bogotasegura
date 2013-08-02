@@ -3,6 +3,6 @@
 <script type="text/javascript" src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.5/src/markerclusterer_packed.js">
 </script>
 
-<%= gmaps4rails(@json) %>
+<%= gmaps("auto_adjust" => "true", "markers" => {"data" => @json }) %>
 
 
