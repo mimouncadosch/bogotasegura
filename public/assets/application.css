@@ -5385,6 +5385,23 @@ small {
   margin-left: 10%;
   margin-right: 10%;
 }
+.span4 {
+  margin-left: 8%;
+}
+.span4 p {
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+}
+.span4 .btn {
+  margin-left: 30%;
+}
+.span4 .field {
+  margin-left: 15%;
+}
+.span4 h2 {
+  text-align: center;
+}
 .intro {
   margin-left: 5%;
   font-size: 15px;
