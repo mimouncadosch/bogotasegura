@@ -13026,7 +13026,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
       };
       this.markers_conf = {
         clusterer_gridSize: 50,
-        clusterer_maxZoom: 5,
+        clusterer_maxZoom: 15,
         custom_cluster_pictures: null,
         custom_infowindow_class: null
       };
@@ -13912,4 +13912,5 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 
 
+	
 ;
