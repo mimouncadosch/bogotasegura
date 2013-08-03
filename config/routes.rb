@@ -10,6 +10,7 @@ Safetest4::Application.routes.draw do
   match '/feed', to: 'charaters#feed'
   match '/about', to: 'subscribers#new'
   match '/', to: 'charaters#index '
+  
 
 
 

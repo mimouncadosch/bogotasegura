@@ -1,8 +1,8 @@
 <%= provide(:title, 'Home')%>
+
 <script type="text/javascript" src="//maps.google.com/maps/api/js?v=3.5&sensor=false&amp;libraries=geometry"></script>
 <script type="text/javascript" src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.5/src/markerclusterer_packed.js">
 </script>
 
 <%= gmaps("auto_adjust" => "true", "markers" => {"data" => @json }) %>
-
 

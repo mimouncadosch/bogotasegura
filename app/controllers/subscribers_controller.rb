@@ -44,7 +44,7 @@ class SubscribersController < ApplicationController
 
     respond_to do |format|
       if @subscriber.save
-        format.html { redirect_to @subscriber, notice: 'Subscriber was successfully created.' }
+        format.html { redirect_to @subscriber, notice: 'Gracias por registrarse con nosotros!' }
         format.json { render json: @subscriber, status: :created, location: @subscriber }
       else
         format.html { render action: "new" }
