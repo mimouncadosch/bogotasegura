@@ -3,11 +3,14 @@ class CharatersController < ApplicationController
   # GET /charaters.json
   def index
     @charaters = Charater.all
+    @charaters = Charater.order( :created_at)
     @json = Charater.all.to_gmaps4rails
     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @charaters }
+      format.csv { send_data @charaters.to_csv }           
+      format.xls #{ send_data @charaters.to_csv(col_sep: "\t") }
     end
   end
 

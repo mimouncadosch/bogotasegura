@@ -9,7 +9,8 @@ class Charater < ActiveRecord::Base
     "<h5>#{tipo}</h5>"+
     "<h5>#{address}</h5>"+
     "<h5>#{neighborhood}</h5>"+
-    "<h5>#{date}</h5>"
+    "<h5>#{date}</h5>"+
+    "<h6>#{description}</h6>"
   end
 
   def gmaps4rails_marker_picture
@@ -23,4 +24,14 @@ class Charater < ActiveRecord::Base
   def gmaps4rails_sidebar
     tipo
   end
+
+  def self.to_csv(options = {})
+        CSV.generate(options) do |csv|
+          csv << column_names
+          all.each do |charater|
+            csv << charater.attributes.values_at(*column_names)
+          end
+        end
+  end
+  
 end
