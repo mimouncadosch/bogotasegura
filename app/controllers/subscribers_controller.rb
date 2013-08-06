@@ -3,10 +3,12 @@ class SubscribersController < ApplicationController
   # GET /subscribers.json
   def index
     @subscribers = Subscriber.all
-
+    @subscribers = Subscriber.order( :created_at)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @subscribers }
+      format.csv { send_data @subscribers.to_csv }           
+      format.xls #{ send_data @charaters.to_csv(col_sep: "\t") }
     end
   end
 

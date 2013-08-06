@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806175009) do
+ActiveRecord::Schema.define(:version => 20130806224135) do
 
   create_table "charaters", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(:version => 20130806175009) do
     t.boolean  "gmaps"
   end
 
+  create_table "sessions", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "subscribers", :force => true do |t|
     t.string   "email"
     t.datetime "created_at", :null => false
@@ -41,5 +46,18 @@ ActiveRecord::Schema.define(:version => 20130806175009) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "usuarios", :force => true do |t|
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "name"
+    t.string   "email_address"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "password_digest"
+    t.string   "remember_token"
+  end
+
+  add_index "usuarios", ["remember_token"], :name => "index_usuarios_on_remember_token"
 
 end

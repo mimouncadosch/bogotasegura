@@ -1,0 +1,15 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+
+  </tr>
+  <% @subscribers.each do |subscriber| %>
+  <tr>
+    <td><%= subscriber.id %></td>
+    <td><%= subscriber.email %></td>
+
+  </tr>
+  <% end %>
+</table>
+
