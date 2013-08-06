@@ -2,14 +2,14 @@ development:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: "mimouncadosch@gmail.com"
-  :password: "mimounsat"
+  :user_name: "bogotasegurainfo@gmail.com"
+  :password: "BogotaSegura2013!"
   :enable_starttls_auto: true
 production:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: "mimouncadosch@gmail.com"
-  :password: "mimounsat"
+  :user_name: "bogotasegurainfo@gmail.com"
+  :password: "BogotaSegura2013!"
   :enable_starttls_auto: true
 
