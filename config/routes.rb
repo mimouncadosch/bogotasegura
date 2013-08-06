@@ -19,11 +19,12 @@ Safetest4::Application.routes.draw do
   match '/feed', to: 'charaters#feed'
   match '/about', to: 'subscribers#new'
   match '/', to: 'charaters#index'
-  match '/signup', to: 'usuarios#new'
+  
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   
-
+  match '/signup', to: 'charaters#index'
+  match '/charaters/new', to: 'charaters#index'
 
 
   # The priority is based upon order of creation:
