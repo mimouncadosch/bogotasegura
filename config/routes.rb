@@ -19,10 +19,13 @@ Safetest4::Application.routes.draw do
   match '/feed', to: 'charaters#feed'
   match '/about', to: 'subscribers#new'
   match '/', to: 'charaters#index'
-  match '/signup', to: 'usuarios#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/usuarios', to: 'session#new'
+  
+#Avoid people registering and entering Admin domain
+  match '/usuarios/new', to: '/'
+  match '/signup', to: '/'
 
 
 
