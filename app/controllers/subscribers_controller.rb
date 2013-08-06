@@ -41,9 +41,10 @@ class SubscribersController < ApplicationController
   # POST /subscribers.json
   def create
     @subscriber = Subscriber.new(params[:subscriber])
-
     respond_to do |format|
       if @subscriber.save
+        
+        NewsletterMailer.weekly(@subscriber).deliver
         format.html { redirect_to @subscriber, notice: 'Gracias por registrarse con nosotros!' }
         format.json { render json: @subscriber, status: :created, location: @subscriber }
       else

@@ -1,4 +1,7 @@
 Safetest4::Application.routes.draw do
+  resources :users
+
+
   resources :subscribers
   resources :charaters
 

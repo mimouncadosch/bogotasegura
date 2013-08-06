@@ -42,7 +42,8 @@ group :assets do
 end
 
 gem 'jquery-rails','2.2.0'
-
+gem 'hpricot'
+gem 'premailer-rails3'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

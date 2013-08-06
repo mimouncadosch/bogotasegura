@@ -1,4 +1,17 @@
 Safetest4::Application.configure do
+  config.action_mailer.default_url_options = { host: "bogotasegura.com" }  
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "bogotasegura.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name:  "mimouncadosch@gmail.com",
+    password: "mimounsat"
+  }
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

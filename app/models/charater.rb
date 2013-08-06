@@ -5,13 +5,13 @@ class Charater < ActiveRecord::Base
                   :address => "address", :normalized_address => "address",
                   :msg => "Sorry, not even Google could figure out where that is"
 
-  def gmaps4rails_infowindow  
-    "<h5>#{tipo}</h5>"+
-    "<h5>#{address}</h5>"+
-    "<h5>#{neighborhood}</h5>"+
-    "<h5>#{date}</h5>"+
-    "<h6>#{description}</h6>"
-  end
+    def gmaps4rails_infowindow  
+      "<h5>#{tipo}</h5>"+
+      "<h5>#{address}</h5>"+
+      "<h5>#{neighborhood}</h5>"+
+      "<h5>#{date}</h5>"+
+      "<h6>#{description}</h6>"
+    end
 
   def gmaps4rails_marker_picture
   {
