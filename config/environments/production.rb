@@ -9,10 +9,10 @@ Safetest4::Application.configure do
     domain: "bogotasegura.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name:  "mimouncadosch@gmail.com",
-    password: "mimounsat"
+    user_name:  "bogotasegurainfo@gmail.com",
+    password: "BogotaSegura2013!"
   }
-  
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
