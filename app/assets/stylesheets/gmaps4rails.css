@@ -11,10 +11,11 @@
 
 .gmaps4rails_map {
   width: 150%;
-  height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 0px;
+  height: 600px;
+  margin: 0;
+  padding-left: 10%;
+  padding-top: -50px;
+  margin-top: -25px;
 }
 
 
