@@ -5396,17 +5396,28 @@ small {
 }
 .span4 .btn {
   margin-left: 30%;
+  color: #ffffff;
+  font-family: "Helvetica";
 }
 .span4 .field {
   margin-left: 15%;
 }
 .span4 h2 {
   text-align: center;
+  color: #F0A800;
+}
+.span4 h2 a {
+  color: #F0A800;
+}
+.span4 h2 a:hover {
+  color: #FF3333;
+  text-decoration: none;
+  background: none;
 }
 .intro {
   margin-left: 5%;
   font-size: 15px;
-  color: #787878;
+  color: #FF3333;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -5481,6 +5492,13 @@ small {
 }
 .email_reg_message b {
   color: #FF8000;
+}
+/* register page */
+.field {
+  padding-left: 5%;
+}
+.btn {
+  margin-left: 5%;
 }
 /* ribbon */
 .ribbon-green {

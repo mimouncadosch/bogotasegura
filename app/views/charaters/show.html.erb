@@ -1,35 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @charater.name %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @charater.date %>
-</p>
-
-<p>
-  <b>Tipo:</b>
-  <%= @charater.tipo %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @charater.address %>
-
-
-<%= link_to 'Edit', edit_charater_path(@charater) %> |
-<%= link_to 'Back', charaters_path %>
-
-
 <div class="email_reg_message well">
 
 <b>Estimado/(a)
-  <%= @subscriber.email %>:</b>
+  <%= @charater.name %>:</b>
 </br>
-Gracias por registrarte a Bogotá Segura. De ahora en adelante recibirás reportes mensuales sobre el estado de la seguridad en Bogotá y en tu barrio.
+Gracias por contribuir con Bogotá Segura. Tu reporte ha sido grabado y hace parte del mapa y de la base de datos.
 </br>
 </br>
 Te deseamos mucha suerte,
