@@ -14,7 +14,7 @@ class NewsletterMailer < ActionMailer::Base
   def weekly(subscriber)
     @url = "http://localhost:3000/"
     @subscriber = subscriber
-    mail(to: @subscriber.email, subject: 'Welcome to My Awesome Site')
+    mail(to: @subscriber.email, subject: 'Bienvenido a Bogotá Segura!')
   end
 
 end
