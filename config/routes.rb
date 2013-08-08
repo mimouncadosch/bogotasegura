@@ -13,21 +13,22 @@ Safetest4::Application.routes.draw do
 
   get "charaters/index"
   root :to => 'charaters#index'
-
-  
   match '/reports', to: 'charaters#new'
   match '/feed', to: 'charaters#feed'
-  match '/about', to: 'subscribers#new'
   match '/', to: 'charaters#index'
-  match '/register', to: 'subscribers#register'
-  
-  match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
   
   match '/signup', to: 'charaters#index'
   match '/charaters/new', to: 'charaters#index'
 
-  match '/subscribers', to: 'charaters#index'
+  match '/about', to: 'subscribers#about'
+  
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  
+  match '/register', to: 'subscribers#new'
+  
+
+  
 
 
 
