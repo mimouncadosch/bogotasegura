@@ -27,6 +27,8 @@ Safetest4::Application.routes.draw do
   match '/signup', to: 'charaters#index'
   match '/charaters/new', to: 'charaters#index'
 
+  match '/subscribers', to: 'charaters#index'
+
 
 
 
