@@ -1,5 +1,5 @@
 class Subscriber < ActiveRecord::Base
-  attr_accessible :email
+  attr_accessible :email, :subscriber_name, :subscriber_neighborhood
 
   def self.to_csv(options = {})
         CSV.generate(options) do |csv|

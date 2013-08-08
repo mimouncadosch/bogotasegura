@@ -34,6 +34,15 @@ class SubscribersController < ApplicationController
     end
   end
 
+  def register
+    @subscriber = Subscriber.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @subscriber }
+    end
+  end
+
   # GET /subscribers/1/edit
   def edit
     @subscriber = Subscriber.find(params[:id])

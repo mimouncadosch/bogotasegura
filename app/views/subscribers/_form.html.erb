@@ -12,7 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label "Nombre" %>
+    <%= f.text_field :subscriber_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Email" %>
     <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label "Barrio de Interés (sobre el cual deseas recibir los reportes)" %>
+    <%= f.select :subscriber_neighborhood, [['Antonio Nariño'], ['Barrios Unidos'], ['Bosa'], ['Candelaria'], ['Chapinero'], ['Ciudad Bolívar'],['Engativá'],['Fontibón'],['Kennedy'],['Mártires'],['Puente Aranda'],['Rafael Uribe'],['San Cristóbal'],['Santa Fe'],['Suba'],['Teusaquillo'],['Tunjuelito'],['Usaquén']], :include_blank => true %> 
   </div>
   <div class="actions">
     <%= f.submit "Regístrate", class: "btn btn-large btn-primary"%>

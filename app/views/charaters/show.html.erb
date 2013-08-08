@@ -18,18 +18,25 @@
 <p>
   <b>Address:</b>
   <%= @charater.address %>
-</p>
-
-<p>
-  <b>Latitude:</b>
-  <%= @charater.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @charater.longitude %>
-</p>
 
 
 <%= link_to 'Edit', edit_charater_path(@charater) %> |
 <%= link_to 'Back', charaters_path %>
+
+
+<div class="email_reg_message well">
+
+<b>Estimado/(a)
+  <%= @subscriber.email %>:</b>
+</br>
+Gracias por registrarte a Bogotá Segura. De ahora en adelante recibirás reportes mensuales sobre el estado de la seguridad en Bogotá y en tu barrio.
+</br>
+</br>
+Te deseamos mucha suerte,
+</br>
+El Equipo de Bogotá Segura
+
+</br>
+
+</div>
+<%= link_to 'Volver', charaters_path %>
