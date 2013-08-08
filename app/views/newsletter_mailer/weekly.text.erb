@@ -1,9 +1,14 @@
-Welcome to example.com, <%= @subscriber.email %>
+Hola <%= @subscriber.subscriber_name %>!
 ===============================================
  
-You have successfully signed up to example.com,
-your username is: <%= @subscriber.email %>.
+Gracias por registrarte a <a href="morning-coast-4417.herokuapp.com">Bogotá Segura!</a> De ahora en adelante recibirás reportes frecuentes sobre el estado del crimen en tus direcciones de interés.
  
-To login to the site, just follow this link: <%= @url %>.
+Para entrar a Bogotá Segura haz click aquí: <%= @url %>.
+
+Tu email es <%= @subscriber.email %> y tu barrio de interés es <%= @subscriber.subscriber_neighborhood %>
  
-Thanks for joining and have a great day!
+Que tengas un muy buen día!
+
+================================================
+
+El Equipo de Bogotá Segura
