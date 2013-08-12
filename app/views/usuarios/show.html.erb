@@ -25,12 +25,12 @@ Bienvenido a Bogotá Segura
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@usuario.latitude}%2C#{@usuario.longitude}" %>
 
-<!-- <h3>Nearby Charaters</h3>
+<h3>Nearby Charaters</h3>
 <ul>
 <% for charater in @charaters %>
   <li><%= link_to charater.tipo, charater %> (<%= charater.distance.round(2) %> miles)</li>
 <% end %>
-</ul> -->
+</ul>
 
 
 <p id="notice"><%= notice %></p>
