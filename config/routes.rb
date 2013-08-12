@@ -28,11 +28,10 @@ Safetest4::Application.routes.draw do
   root :to => 'charaters#index'
   
   match '/reports', to: 'charaters#new'
-  match '/', to: 'charaters#index'
+  match '/', to: 'charaters#index' 
   
-  match '/signup', to: 'charaters#index'
   match '/charaters/new', to: 'charaters#index'
-  match '/inscribir', to: 'charaters#inscribir'
+  # match '/inscribir', to: 'charaters#inscribir'
 
   
   
@@ -47,7 +46,7 @@ Safetest4::Application.routes.draw do
   match '/entrar', to: 'sesiones#new'
   match '/salir', to: 'sesiones#destroy', via: :delete
   
-
+  # match '/signup', to: 'usuarios#new'
 
 
 

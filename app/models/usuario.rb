@@ -16,12 +16,14 @@ class Usuario < ActiveRecord::Base
                        :confirmation => true,
                        :length => { :within => 6..40 }
 
-#Geocoder
-geocoded_by :address
-after_validation :geocode
+
 
 def create_remember_token
   self.remember_token = SecureRandom.urlsafe_base64
 end                   
+
+#Geocoder
+geocoded_by :address
+after_validation :geocode
 
 end
