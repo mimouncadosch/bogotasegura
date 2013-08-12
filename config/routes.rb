@@ -1,4 +1,7 @@
 Safetest4::Application.routes.draw do
+  resources :sesiones
+
+
   resources :usuarios
 
 
@@ -7,8 +10,11 @@ Safetest4::Application.routes.draw do
 
   resources :users
 
-
   resources :subscribers
+
+  
+  
+
   resources :charaters
 
   get "charaters/index"
@@ -26,8 +32,11 @@ Safetest4::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
   
   match '/register', to: 'subscribers#new'
-  
+  # match '/subscribers', to: 'charaters#index'   
 
+
+  match '/entrar', to: 'sesiones#new'
+  match '/salir', to: 'sesiones#destroy', via: :delete
   
 
 

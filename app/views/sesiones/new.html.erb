@@ -1,0 +1,18 @@
+<% provide(:title, "Entra a Tu Cuenta") %>
+<h1>Entra a Tu Cuenta</h1>
+
+
+<div class="row"> 
+<div class="span6 offset3">
+	<%= form_for(:sesione, url: sesiones_path) do |f| %>	<%= f.label :email %>
+		<%= f.text_field :email %> 
+		
+		<%= f.label :subscriber_password %>
+		<%= f.password_field :subscriber_password %>
+		</br>
+		
+		<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+	<% end %>
+
+</div>
+</div>

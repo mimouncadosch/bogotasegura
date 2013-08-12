@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130808182135) do
+ActiveRecord::Schema.define(:version => 20130808215509) do
 
   create_table "charaters", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(:version => 20130808182135) do
     t.boolean  "gmaps"
   end
 
+  create_table "sesiones", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "sessions", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -35,10 +40,14 @@ ActiveRecord::Schema.define(:version => 20130808182135) do
 
   create_table "subscribers", :force => true do |t|
     t.string   "email"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "subscriber_name"
     t.string   "subscriber_neighborhood"
+    t.string   "subscriber_password"
+    t.string   "subscriber_password_confirmation"
+    t.string   "remember_token"
+    t.string   "password_digest"
   end
 
   create_table "users", :force => true do |t|
