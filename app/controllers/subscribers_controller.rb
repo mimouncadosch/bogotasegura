@@ -4,6 +4,8 @@ class SubscribersController < ApplicationController
   def index
     @subscribers = Subscriber.all
     @subscribers = Subscriber.order( :created_at)
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @subscribers }

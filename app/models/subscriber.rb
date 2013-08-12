@@ -1,5 +1,11 @@
 class Subscriber < ActiveRecord::Base
-  attr_accessible :email, :subscriber_name, :subscriber_neighborhood
+  attr_accessible :email, :subscriber_name, :subscriber_neighborhood, :latitude, :longitude
+  acts_as_gmappable :latitude => 'lat', :longitude => 'lng', :process_geocoding => false,
+                  :address => "address", :normalized_address => "address",
+                  :msg => "Sorry, not even Google could figure out where that is"
+
+
+  
   # has_secure_password
   
   # before_save { |subscriber| subscriber.email = email.downcase }
