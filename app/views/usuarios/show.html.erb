@@ -28,7 +28,7 @@ Bienvenido a Bogotá Segura
 <h3>Nearby Charaters</h3>
 <ul>
 <% for charater in @charaters %>
-  <li><%= link_to charater.tipo, charater %> (<%= charater.distance.round(2) %> miles)</li>
+  <li><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> miles)</li>
 <% end %>
 </ul>
 
