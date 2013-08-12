@@ -93,5 +93,10 @@ class CharatersController < ApplicationController
       format.json { render json: @charater }
     end
   end
+
+  def about
+  end
+
+
   
 end
