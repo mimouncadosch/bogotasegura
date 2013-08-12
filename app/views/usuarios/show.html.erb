@@ -3,6 +3,11 @@ Bienvenido a Bogotá Segura
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Nombre:</b>
+  <%= @usuario.name %>
+</p>
+
+<p>
   <b>Address:</b>
   <%= @usuario.address %>
 </p>
@@ -23,8 +28,6 @@ Bienvenido a Bogotá Segura
 </p>
 
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@usuario.latitude}%2C#{@usuario.longitude}" %>
-
 <h3>Nearby Charaters</h3>
 <ul>
 <% for charater in @charaters %>
@@ -35,6 +38,7 @@ Bienvenido a Bogotá Segura
 
 <p id="notice"><%= notice %></p>
 
+<%= gmaps("auto_adjust" => "true", "markers" => {"data" => @json }) %>
 
 <%= link_to 'Edit', edit_usuario_path(@usuario) %> |
 <%= link_to 'Back', usuarios_path %>

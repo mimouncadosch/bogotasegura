@@ -12,6 +12,7 @@ class UsuariosController < ApplicationController
   # GET /usuarios/1
   # GET /usuarios/1.json
   def show
+    @json = Charater.all.to_gmaps4rails
     @usuario = Usuario.find(params[:id])
     @charaters = Charater.near([@usuario.latitude, @usuario.longitude],
     10, :order => :distance)
