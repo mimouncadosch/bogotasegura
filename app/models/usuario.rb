@@ -1,5 +1,6 @@
 class Usuario < ActiveRecord::Base
-  attr_accessible :email_address, :name, :password, :password_confirmation
+  attr_accessible :email_address, :name, :password, :password_confirmation,
+                  :address, :latitude, :longitude
   has_secure_password
   
   before_save { |usuario| usuario.email_address = email_address.downcase }
@@ -14,6 +15,10 @@ class Usuario < ActiveRecord::Base
   validates :password, :presence => true,
                        :confirmation => true,
                        :length => { :within => 6..40 }
+
+#Geocoder
+geocoded_by :address
+after_validation :geocode
 
 def create_remember_token
   self.remember_token = SecureRandom.urlsafe_base64

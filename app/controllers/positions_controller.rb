@@ -7,11 +7,6 @@ class PositionsController < ApplicationController
     else
       @positions = Position.all
   end
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @positions }
-    end
   end
 
   # GET /positions/1

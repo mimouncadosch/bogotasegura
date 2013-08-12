@@ -39,7 +39,7 @@ Safetest4::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   
-  match '/register', to: 'subscribers#new'
+  match '/register', to: 'usuarios#new'
   match '/about', to: 'subscribers#about'
   # match '/subscribers', to: 'charaters#index'   
 

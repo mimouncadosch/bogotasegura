@@ -2,11 +2,10 @@ class UsuariosController < ApplicationController
   # GET /usuarios
   # GET /usuarios.json
   def index
-    @usuarios = Usuario.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @usuarios }
+    if params[:search].present?
+      @usuarios = Usuario.near(params[:search], 50, :order => :distance)
+    else
+      @usuarios = Usuario.all
     end
   end
 
@@ -14,10 +13,12 @@ class UsuariosController < ApplicationController
   # GET /usuarios/1.json
   def show
     @usuario = Usuario.find(params[:id])
+    @charaters = Charater.near([@usuario.latitude, @usuario.longitude],
+    10, :order => :distance)
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @usuario }
+      format.json { render json: @charater }
     end
   end
 

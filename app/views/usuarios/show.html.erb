@@ -1,6 +1,39 @@
 <div class="admin_page">
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>Address:</b>
+  <%= @usuario.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @usuario.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @usuario.longitude %>
+</p>
+
+<p>
+  <b>Email Address:</b>
+  <%= @usuario.email_address %>
+</p>
+
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@usuario.latitude}%2C#{@usuario.longitude}" %>
+
+<h3>Nearby Charaters</h3>
+<ul>
+<% for charater in @charaters %>
+  <li><%= link_to charater.tipo, charater %> (<%= charater.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+
+
+<p id="notice"><%= notice %></p>
+
     <%= link_to "CSV", subscribers_path(format: "csv") %> |
     <%= link_to "Excel", subscribers_path(format: "xls") %>
 
