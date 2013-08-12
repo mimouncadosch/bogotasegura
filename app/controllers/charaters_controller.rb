@@ -84,4 +84,14 @@ class CharatersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def inscribir
+    @charater = Charater.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @charater }
+    end
+  end
+  
 end

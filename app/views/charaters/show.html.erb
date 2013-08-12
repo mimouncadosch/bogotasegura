@@ -14,3 +14,11 @@ El Equipo de Bogotá Segura
 
 </div>
 <%= link_to 'Volver', charaters_path %>
+
+
+<h3>Nearby charaters</h3>
+<ul>
+<% for charater in @charater.nearbys(10) %>
+  <li><%= link_to charater.tipo, charater %> (<%= charater.distance.round(2) %> miles)</li>
+<% end %>
+</ul>

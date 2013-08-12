@@ -1,4 +1,13 @@
 Safetest4::Application.routes.draw do
+  resources :positions
+
+
+  resources :locations
+
+
+  resources :loactions
+
+
   resources :sesiones
 
 
@@ -11,20 +20,19 @@ Safetest4::Application.routes.draw do
   resources :users
 
   resources :subscribers
-
   
-  
-
   resources :charaters
 
   get "charaters/index"
+
   root :to => 'charaters#index'
+  
   match '/reports', to: 'charaters#new'
-  match '/feed', to: 'charaters#feed'
   match '/', to: 'charaters#index'
   
   match '/signup', to: 'charaters#index'
   match '/charaters/new', to: 'charaters#index'
+  match '/inscribir', to: 'charaters#inscribir'
 
   
   

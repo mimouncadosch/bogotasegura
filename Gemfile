@@ -13,6 +13,9 @@ gem 'therubyracer', '~> 0.10.2', :platforms => :ruby
 gem "less-rails-bootstrap"
 gem "twitter-bootstrap-rails"
 gem 'sass-rails',   '3.2.4'
+gem 'geocoder'
+
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

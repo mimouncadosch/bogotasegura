@@ -1,6 +1,7 @@
 class Charater < ActiveRecord::Base
   attr_accessible :address, :date, :latitude, :longitude, :name, :tipo, :name, :description, :cedula, :neighborhood, :gmaps
 
+  #Gmaps4Rails
   acts_as_gmappable :latitude => 'lat', :longitude => 'lng', :process_geocoding => false,
                   :address => "address", :normalized_address => "address",
                   :msg => "Sorry, not even Google could figure out where that is"
@@ -24,6 +25,11 @@ class Charater < ActiveRecord::Base
   def gmaps4rails_sidebar
     tipo
   end
+
+  #Geocoder
+  geocoded_by :address
+  after_validation :geocode
+  
 
   def self.to_csv(options = {})
         CSV.generate(options) do |csv|

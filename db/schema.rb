@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812020611) do
+ActiveRecord::Schema.define(:version => 20130812164301) do
 
   create_table "charaters", :force => true do |t|
     t.string   "name"
@@ -26,11 +26,29 @@ ActiveRecord::Schema.define(:version => 20130812020611) do
     t.string   "cedula"
     t.string   "neighborhood"
     t.boolean  "gmaps"
+    t.string   "email"
+  end
+
+  create_table "loactions", :force => true do |t|
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "address"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.float    "latitude"
+    t.float    "longitude"
+  end
+
+  create_table "positions", :force => true do |t|
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sesiones", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "sessions", :force => true do |t|
@@ -47,11 +65,6 @@ ActiveRecord::Schema.define(:version => 20130812020611) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "login"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "usuarios", :force => true do |t|

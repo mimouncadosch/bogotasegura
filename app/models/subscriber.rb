@@ -9,6 +9,9 @@ class Subscriber < ActiveRecord::Base
   
               
 
+  geocoded_by :address
+  after_validation :geocode
+  
   def self.to_csv(options = {})
         CSV.generate(options) do |csv|
           csv << column_names
