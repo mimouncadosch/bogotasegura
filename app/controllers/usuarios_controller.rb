@@ -13,10 +13,10 @@ class UsuariosController < ApplicationController
   # GET /usuarios/1.json
   def show
     @usuario = Usuario.find(params[:id])
-    @charater = Charater.find(params[:id])
 
     @charaters = Charater.near([@usuario.latitude, @usuario.longitude],
     20, :order => :distance, :units => :km )
+
     @json1 = Charater.all.to_gmaps4rails
     @json2 = Usuario.all.to_gmaps4rails
 
@@ -52,6 +52,8 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
+
+        NewsletterMailer.weekly(@usuarios).deliver
         format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
         format.json { render json: @usuario, status: :created, location: @usuario }
       else
