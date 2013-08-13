@@ -5345,12 +5345,6 @@ body {
   text-decoration: none;
 }
 /* feed */
-h1 {
-  margin-left: 5%;
-  font-size: 25px;
-  font-family: 'Julius Sans One', sans-serif;
-  color: #FF3333;
-}
 small {
   color: #999999;
 }
@@ -5367,12 +5361,6 @@ small {
 .charater_page p {
   margin-left: 5%;
 }
-.charater_page h1 {
-  margin-left: 5%;
-  font-size: 25px;
-  font-family: "Helvetica";
-  color: #3366CC;
-}
 .charater_page .show_options {
   margin-left: 5%;
 }
@@ -5382,6 +5370,30 @@ small {
 }
 .charater_page .show_map {
   margin-left: 5%;
+}
+.show_page h1 {
+  margin-left: 5%;
+  font-size: 25px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #FF3333;
+}
+.show_page h2 {
+  margin-left: 10%;
+  font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #0099CC;
+}
+.show_page .user_info_title {
+  margin-left: 10%;
+  font-size: 15px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #0099CC;
+}
+.show_page .user_info {
+  margin-left: 10%;
+  font-size: 12px;
+  font-family: 'Helvetica';
+  color: #000000;
 }
 /* about page */
 .well {
