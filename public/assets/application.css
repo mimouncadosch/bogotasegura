@@ -5318,6 +5318,9 @@ a.badge:focus {
 .navbar .nav.dropdown-menu a {
   color: #FFF;
 }
+.nav .dropdown-menu li a {
+  color: #000000;
+}
 /* body */
 body {
   background: url(/assets/debut_light.png);
