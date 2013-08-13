@@ -1,44 +1,33 @@
-<div class="admin_page">
-Bienvenido a Bogotá Segura
 <p id="notice"><%= notice %></p>
+<div class="show_page">
+<h1><%= @usuario.name %></h1>
+<div class="span5">
+  <h2>Tu Información</h2>
 
-<p>
-  <b>Nombre:</b>
-  <%= @usuario.name %>
-</p>
+  <!-- User Info -->
+  <div class="user_info_title">Dirección de interés:</div>
+  <div class="user_info"><%= @usuario.address %></div>
 
-<p>
-  <b>Address:</b>
-  <%= @usuario.address %>
-</p>
+  <div class="user_info_title">Correo electrónico:</div>
+  <div class="user_info"><%= @usuario.email_address %></div>
 
-<p>
-  <b>Latitude:</b>
-  <%= @usuario.latitude %>
-</p>
+</div>
 
-<p>
-  <b>Longitude:</b>
-  <%= @usuario.longitude %>
-</p>
+<div class="span7">
+  <h2>Crímenes al rededor de tu dirección de interés</h2>
+  <ul>
+  <% for charater in @charaters %>
+    <li><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> miles)</li>
+  <% end %>
+  </ul>
+</div>
+</div>
 
-<p>
-  <b>Email Address:</b>
-  <%= @usuario.email_address %>
-</p>
+<div class="row foo" id="bar">
+  <%= gmaps("auto_adjust" => "true", "markers" => {"data" => @json }) %>
 
+</div>
 
-<h3>Nearby Charaters</h3>
-<ul>
-<% for charater in @charaters %>
-  <li><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> miles)</li>
-<% end %>
-</ul>
-
-
-<p id="notice"><%= notice %></p>
-
-<%= gmaps("auto_adjust" => "true", "markers" => {"data" => @json }) %>
 
 <%= link_to 'Edit', edit_usuario_path(@usuario) %> |
 <%= link_to 'Back', usuarios_path %>
