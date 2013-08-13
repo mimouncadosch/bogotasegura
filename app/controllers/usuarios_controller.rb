@@ -53,7 +53,7 @@ class UsuariosController < ApplicationController
     respond_to do |format|
       if @usuario.save
 
-        NewsletterMailer.weekly(@usuarios).deliver
+        NewsletterMailer.weekly(@usuario).deliver
         format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
         format.json { render json: @usuario, status: :created, location: @usuario }
       else
