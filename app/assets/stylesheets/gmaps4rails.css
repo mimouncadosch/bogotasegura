@@ -9,6 +9,18 @@
   width: 800px;
 }
 
+#map2{
+  width: 600px;
+  height: 400px;
+  padding-top: 300px;
+  margin-top: 200px;
+  padding-left: 20%;
+  margin-left: 20%;
+}
+
+#map2 img { max-width: none; }
+#map2 label { width: auto; display:inline; }
+
 .gmaps4rails_map {
   width: 150%;
   height: 600px;

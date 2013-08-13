@@ -12,11 +12,17 @@ class UsuariosController < ApplicationController
   # GET /usuarios/1
   # GET /usuarios/1.json
   def show
-    @json = Charater.all.to_gmaps4rails
     @usuario = Usuario.find(params[:id])
-    @charaters = Charater.near([@usuario.latitude, @usuario.longitude],
-    10, :order => :distance)
+    @charater = Charater.find(params[:id])
 
+    @charaters = Charater.near([@usuario.latitude, @usuario.longitude],
+    20, :order => :distance, :units => :km )
+    @json1 = Charater.all.to_gmaps4rails
+    @json2 = Usuario.all.to_gmaps4rails
+
+    @json = @json = (JSON.parse(@json1) + JSON.parse(@json2)).to_json
+        
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @charater }
