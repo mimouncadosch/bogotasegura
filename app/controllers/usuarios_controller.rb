@@ -59,8 +59,11 @@ before_filter :correct_usuario, only: [:show, :edit, :update]
       if @usuario.save
 
         NewsletterMailer.weekly(@usuario).deliver
+        
+        sign_in @usuario
         format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
         format.json { render json: @usuario, status: :created, location: @usuario }
+
       else
         format.html { render action: "new" }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
