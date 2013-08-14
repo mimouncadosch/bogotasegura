@@ -5394,7 +5394,7 @@ small {
 }
 .show_page h3 {
   font-size: 14px;
-  color: #F0A800;
+  color: #0099CC;
   font-family: 'Julius Sans One', sans-serif;
 }
 .show_page .user_info_title {
@@ -5402,7 +5402,7 @@ small {
   line-height: 150%;
   font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
-  color: #0099CC;
+  color: #F0A800;
 }
 .show_page .user_info {
   margin-left: 0%;
@@ -5455,10 +5455,12 @@ h2 {
 }
 .intro {
   margin-left: 5%;
-  font-size: 15px;
+  font-size: 20px;
   color: #0099CC;
   letter-spacing: 2px;
   text-decoration: none;
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 150%;
 }
 .accordion-heading {
   font-size: 15px;
