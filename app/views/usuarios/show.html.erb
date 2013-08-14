@@ -2,16 +2,26 @@
 <div class="show_page">
 <h1>Bienvenido, <%= @usuario.name %></h1>
 
+
 <div class="span4">
 
+<!-- Tab -->
 <div class="tabbable">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">Tu Información</a></li>
-    <li><a href="#tab2" data-toggle="tab">Alrededor Tuyo </a></li>
+    <li class="active"><a href="#tab1" data-toggle="tab">Alrededor Tuyo</a></li>
+    <li><a href="#tab2" data-toggle="tab">Tu Información</a></li>
   </ul>
   <div class="tab-content">
 
     <div class="tab-pane active" id="tab1">
+      <ul>
+        <% for charater in @charaters %>
+          <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> kilometros)</ol>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="tab-pane" id="tab2">
       <h2>Tu Información</h2>
       <div class="user_info_title">Nombre:</div>
       <div class="user_info"><%= @usuario.name %></div>
@@ -24,20 +34,14 @@
 
     </div>
 
-    <div class="tab-pane" id="tab2">
-      <ul>
-        <% for charater in @charaters %>
-      <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> kilometros)</ol>
-        <% end %>
-      </ul>
-    </div>
+  </div>
+</div>
+  
+</div>
+<!-- End Tab -->
 
-  </div>
-  </div>
-  <%= link_to 'Edit', edit_usuario_path(@usuario) %> |
-  <%= link_to 'Back', usuarios_path %>
-  </div>
-  <div class="span8">
+<!-- Map -->
+<div class="span8">
   
      <%= gmaps({
              "map_options" => {:id => "map2", 
@@ -48,7 +52,6 @@
               "center_on_user" => false,
               "zoom" => 14},
               "markers"     => {"data" => @json1 }
-            
             })
       %>
 
