@@ -1,5 +1,5 @@
 class Usuario < ActiveRecord::Base
-  attr_accessible :email_address, :name, :password, :password_confirmation,
+  attr_accessible :email_address, :name, :last_name, :password, :password_confirmation,
                   :address, :latitude, :longitude
   has_secure_password
   
