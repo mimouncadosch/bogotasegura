@@ -19,6 +19,11 @@ class CharatersController < ApplicationController
   def show
     @charater = Charater.find(params[:id])
 
+    @charaters = Charater.near([@charater.latitude, @charater.longitude],
+    10, :order => :distance, :units => :km )
+
+    @json1 = Charater.all.to_gmaps4rails
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @charater }

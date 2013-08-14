@@ -1,24 +1,26 @@
-<div class="email_reg_message well">
+<div class="email_reg_message">
 
-<b>Estimado/(a)
-  <%= @charater.name %>:</b>
-</br>
-Gracias por contribuir con Bogotá Segura. Tu reporte ha sido grabado y hace parte del mapa y de la base de datos.
-</br>
-</br>
-Te deseamos mucha suerte,
-</br>
-El Equipo de Bogotá Segura
+<h1>Crímenes reportados al rededor</h1>
 
-</br>
-
-</div>
-<%= link_to 'Volver', charaters_path %>
-
-
-<h3>Nearby charaters</h3>
+<span class="span4">
 <ul>
 <% for charater in @charater.nearbys(10) %>
-  <li><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> miles)</li>
+  <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> km)</ol>
 <% end %>
 </ul>
+</div>
+
+<div class="span8">
+  
+     <%= gmaps({
+             "map_options" => {:id => "map2", 
+              "auto_adjust" => false,
+              "center_latitude" => @charater.latitude, 
+              "center_longitude" => @charater.longitude, 
+              "detect_location" => false, 
+              "center_on_user" => false,
+              "zoom" => 14},
+              "markers"     => {"data" => @json1 }
+            })
+      %>
+</div>
