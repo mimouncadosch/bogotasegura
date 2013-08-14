@@ -5411,6 +5411,13 @@ small {
   font-family: 'Helvetica';
   color: #000000;
 }
+/* charater show page */
+h2 {
+  margin-left: 5%;
+  font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #F0A800;
+}
 /* about page */
 .well {
   width: 80%;

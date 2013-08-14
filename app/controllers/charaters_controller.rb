@@ -18,7 +18,6 @@ class CharatersController < ApplicationController
   # GET /charaters/1.json
   def show
     @charater = Charater.find(params[:id])
-
     @charaters = Charater.near([@charater.latitude, @charater.longitude],
     10, :order => :distance, :units => :km )
 
