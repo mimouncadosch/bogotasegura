@@ -16,7 +16,7 @@
     <div class="tab-pane active" id="tab1">
       <ul>
         <% for charater in @charaters %>
-          <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> kilometros)</ol>
+          <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> km)</ol>
         <% end %>
       </ul>
     </div>
