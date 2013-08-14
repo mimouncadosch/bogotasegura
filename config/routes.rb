@@ -7,7 +7,6 @@ Safetest4::Application.routes.draw do
   resources :subscribers
   
   
-
   get "charaters/index"
 
   root :to => 'charaters#index'
@@ -28,6 +27,8 @@ Safetest4::Application.routes.draw do
 
   match '/entrar', to: 'sesiones#new'
   match '/salir', to: 'sesiones#destroy', via: :delete
+
+
   
   # match '/signup', to: 'usuarios#new'
 

@@ -1,7 +1,8 @@
 class UsuariosController < ApplicationController
 before_filter :signed_in_usuario, 
           only: [:index, :show, :edit, :update, :destroy]
-before_filter :correct_usuario, only: [:edit, :update]
+before_filter :correct_usuario, only: [:show, :edit, :update]
+
 
   # GET /usuarios
   # GET /usuarios.json
@@ -46,7 +47,7 @@ before_filter :correct_usuario, only: [:edit, :update]
 
   # GET /usuarios/1/edit
   def edit
-    @usuario = Usuario.find(params[:id])
+    # @usuario = Usuario.find(params[:id])
   end
 
   # POST /usuarios
@@ -70,17 +71,25 @@ before_filter :correct_usuario, only: [:edit, :update]
   # PUT /usuarios/1
   # PUT /usuarios/1.json
   def update
-    @usuario = Usuario.find(params[:id])
-
-    respond_to do |format|
-      if @usuario.update_attributes(params[:usuario])
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @usuario.errors, status: :unprocessable_entity }
-      end
+    if @usuario.update_attributes(params[:usuario])
+      sign_in @usuario
+      flash[:success] = "Profile updated"
+      redirect_to @usuario
+    else
+      render 'edit'
     end
+    # @usuario = Usuario.find(params[:id])
+
+    # respond_to do |format|
+    #   if @usuario.update_attributes(params[:usuario])
+    #     format.html { redirect_to @usuario, notice: 'Usuario was successfully updated.' }
+    #     format.json { head :no_content }
+    #   else
+    #     format.html { render action: "edit" }
+    #     format.json { render json: @usuario.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
   end
 
   # DELETE /usuarios/1
@@ -101,4 +110,6 @@ before_filter :correct_usuario, only: [:edit, :update]
     @usuario = Usuario.find(params[:id])
     redirect_to root_path unless current_usuario?(@usuario)
   end
+  
+  
 end
