@@ -3,13 +3,13 @@
 <h1>Bienvenido, <%= @usuario.name %></h1>
 
 
-<div class="span4">
+<div class="span5">
 
 <!-- Tab -->
 <div class="tabbable">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">Alrededor Tuyo</a></li>
-    <li><a href="#tab2" data-toggle="tab">Tu Información</a></li>
+    <li class="active"><a href="#tab1" data-toggle="tab"><h3>Alrededor Tuyo</h3></a></li>
+    <li><a href="#tab2" data-toggle="tab"><h3>Tu Información</h3></a></li>
   </ul>
   <div class="tab-content">
 
@@ -22,7 +22,6 @@
     </div>
 
     <div class="tab-pane" id="tab2">
-      <h2>Tu Información</h2>
       <div class="user_info_title">Nombre:</div>
       <div class="user_info"><%= @usuario.name %></div>
 
@@ -41,7 +40,7 @@
 <!-- End Tab -->
 
 <!-- Map -->
-<div class="span8">
+<div class="span7">
   
      <%= gmaps({
              "map_options" => {:id => "map2", 
