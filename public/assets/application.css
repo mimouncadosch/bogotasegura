@@ -5388,19 +5388,21 @@ small {
 }
 .show_page h2 {
   margin-left: 10%;
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Julius Sans One', sans-serif;
   color: #0099CC;
 }
 .show_page .user_info_title {
   margin-left: 10%;
-  font-size: 15px;
+  line-height: 150%;
+  font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
   color: #0099CC;
 }
 .show_page .user_info {
   margin-left: 10%;
-  font-size: 12px;
+  line-height: 150%;
+  font-size: 15px;
   font-family: 'Helvetica';
   color: #000000;
 }
@@ -5509,6 +5511,12 @@ small {
 }
 .field {
   color: #0099CC;
+}
+.report_page h2 {
+  color: #0099CC;
+  font-size: 25px;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-left: 10%;
 }
 /* email registration page */
 .email_reg_message .well {

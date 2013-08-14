@@ -31,13 +31,13 @@
 </div>
 
 <div class="field field_date">
-  <%= f.label "Fecha" %>
-  <%= f.date_select :date, ampm: true, :start_year => Date.current.year, :end_year => Date.current.year + 2, order: [:day, :month, :year]  %>
+  <%= f.label "Fecha y hora del incidente" %>
+  <%= f.datetime_select :date, ampm: true, :minute_step => 15, :start_year => Date.current.year, :end_year => Date.current.year + 2, order: [:day, :month, :year]  %>
 </div>
 
 <div class="field">
       <%= f.label "Descripción"%>
-      <%= f.text_area :description, placeholder: "Cuéntanos: ¿qué te pasó?", :rows => "7"%>
+      <%= f.text_area :description, placeholder: "Cuéntanos: ¿qué pasó?", :rows => "7"%>
 </div>
 
   <div class="field">

@@ -246,17 +246,11 @@
     </div>
   </div>
 <!-- End of Modal -->
+
 <h1>Reporta</h1>
-<div class="accordion accordion_report" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        Haz click en el mapa en el lugar del crimen o delito
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse in">
-      <div class="accordion-inner">
+
+<div class="span8 report_page">
+        <h2 text-align="center">Haz click en el mapa en el lugar del crimen o delito</h2>
         <%= render 'barrioslist' %>
         <!-- Map -->
           <div id="map-canvas" class="span8" mrel="tooltip" data-placement="right" data-animation="true" title="Haz click en el lugar del crimen/delito"></div>
@@ -264,17 +258,21 @@
           img{max-width: none;} 
           #map-canvas {
           height: 450px;
-          width: 80%;
+          width: 110%;
           margin-left: 10%;
-          margin-right: 20%;
+          margin-right: 0%;
           }
           </style>
-        <!-- End of Map -->      
-      </div>
-    </div>
-  </div>
-  <h1>Completa los campos siguientes</h1>
+        <!-- End of Map -->   
+
+</div>
+<div class="span4 report_page">
+  <h2>Completa los campos siguientes</h2>
   <%= render 'form' %>
+</div>
+     
+      
+
   
 </div>
     

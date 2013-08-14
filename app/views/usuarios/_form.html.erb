@@ -16,17 +16,21 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label "Apellido" %>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
     <%= f.label "Correo Electrónico" %>
     <%= f.text_field :email_address %>
   </div>
 
   <div class="field">
-    <%= f.label "Clave" %>
+    <%= f.label "Contraseña" %>
     <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirma tu clave" %>
+    <%= f.label :password_confirmation, "Confirma tu contraseña" %>
     <%= f.password_field :password_confirmation %>
   </div>
 
