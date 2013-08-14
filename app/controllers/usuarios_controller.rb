@@ -20,7 +20,7 @@ before_filter :correct_usuario, only: [:show, :edit, :update]
     @usuario = Usuario.find(params[:id])
 
     @charaters = Charater.near([@usuario.latitude, @usuario.longitude],
-    20, :order => :distance, :units => :km )
+    10, :order => :distance, :units => :km )
 
     @json1 = Charater.all.to_gmaps4rails
     @json2 = Usuario.all.to_gmaps4rails
