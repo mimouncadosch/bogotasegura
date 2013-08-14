@@ -17,4 +17,11 @@ class NewsletterMailer < ActionMailer::Base
     mail(to: @usuario.email_address, subject: 'Bienvenido a Bogota Segura!')
   end
 
+
+  def report(usuario)
+    @url = "http://localhost:3000/"
+    @usuario = usuario
+    mail(to: @usuario.email_address, subject: 'Un crimen ha sido reportado cerca de usted')
+  end
+  
 end
