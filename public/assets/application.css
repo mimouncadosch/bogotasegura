@@ -5387,20 +5387,25 @@ small {
   color: #FF3333;
 }
 .show_page h2 {
-  margin-left: 10%;
-  font-size: 15px;
+  margin-left: 0%;
+  font-size: 25px;
   font-family: 'Julius Sans One', sans-serif;
-  color: #0099CC;
+  color: #F0A800;
+}
+.show_page h3 {
+  font-size: 14px;
+  color: #F0A800;
+  font-family: 'Julius Sans One', sans-serif;
 }
 .show_page .user_info_title {
-  margin-left: 10%;
+  margin-left: 0%;
   line-height: 150%;
   font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
   color: #0099CC;
 }
 .show_page .user_info {
-  margin-left: 10%;
+  margin-left: 0%;
   line-height: 150%;
   font-size: 15px;
   font-family: 'Helvetica';
@@ -5431,6 +5436,7 @@ small {
 .span4 h2 {
   text-align: center;
   color: #F0A800;
+  font-family: 'Julius Sans One', sans-serif;
 }
 .span4 h2 a {
   color: #F0A800;
@@ -5443,7 +5449,7 @@ small {
 .intro {
   margin-left: 5%;
   font-size: 15px;
-  color: #FF3333;
+  color: #0099CC;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -5514,7 +5520,7 @@ small {
 }
 .report_page h2 {
   color: #0099CC;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
   margin-left: 10%;
 }
@@ -6844,9 +6850,9 @@ ul.icons-ul > li .icon-li {
 
 #map2{
   width: 600px;
-  height: 400px;
-  padding-top: 300px;
-  margin-top: 200px;
+  height: 600px;
+  padding-top: 0px;
+  margin-top: 0px;
   padding-left: 20%;
   margin-left: 20%;
 }
