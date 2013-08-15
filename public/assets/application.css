@@ -5526,6 +5526,8 @@ h2 {
 }
 .field {
   color: #0099CC;
+  font-size: 15px;
+  line-height: 150%;
 }
 .report_page h2 {
   color: #0099CC;
