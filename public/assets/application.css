@@ -5507,8 +5507,8 @@ h2 {
   padding-left: 10%;
 }
 /* report form */
-.barrios_dropdown {
-  margin-left: 30%;
+.barrios_dropdown_report {
+  margin-left: 10%;
   font-size: 15px;
   color: #0099CC;
 }
@@ -5553,6 +5553,11 @@ h2 {
 /* admin_page */
 .admin_page {
   padding-left: 10%;
+}
+.barrios_dropdown_register {
+  margin-left: 0%;
+  font-size: 15px;
+  color: #0099CC;
 }
 /* ribbon */
 .ribbon-green {
