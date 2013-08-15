@@ -49,9 +49,9 @@ class CharatersController < ApplicationController
   # POST /charaters.json
   def create
     @charater = Charater.new(params[:charater])
-    
+  
     respond_to do |format|
-      if @charater.save
+      if @charater.save 
         
         format.html { redirect_to @charater, notice: 'Su reporte ha sido registrado. Gracias por reportar con nosotros!' }
         format.json { render json: @charater, status: :created, location: @charater }
@@ -103,7 +103,6 @@ class CharatersController < ApplicationController
 
   def about
   end
-
 
   
 end

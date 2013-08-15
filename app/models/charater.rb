@@ -39,5 +39,6 @@ class Charater < ActiveRecord::Base
           end
         end
   end
+
   
 end
