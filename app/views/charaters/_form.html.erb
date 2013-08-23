@@ -11,32 +11,35 @@
     </div>
   <% end %>
 
-<!-- <div class="field">
-  <%= f.label "Nombre" %>
-  <%= f.text_field :name, placeholder: "Su nombre será anónimo" %> 
-</div>
- -->
+
 <div class="field">
-      <%= f.label "Tipo de crimen" %>
+      <%= f.label "¿Cuál fue el tipo de crimen?" %>
       <%= f.select :tipo, [['Mano Armada'],['Paseo Millonario'], ['Fleteo (robo a la salida de una identidad bancaria)'], ['Carterista'], ['Asalto con Arma Blanca'], ['Extorsion'], ['Otro']], :include_blank => true %> 
 </div>
 
 <div class="field">
-      <%= f.label "Barrio" %>
+      <%= f.label "¿En qué barrio sucedió?" %>
       <%= f.select :neighborhood, [['Antonio Nariño'], ['Barrios Unidos'], ['Bosa'], ['Candelaria'], ['Chapinero'], ['Ciudad Bolívar'],['Engativá'],['Fontibón'],['Kennedy'],['Mártires'],['Puente Aranda'],['Rafael Uribe'],['San Cristóbal'],['Santa Fe'],['Suba'],['Teusaquillo'],['Tunjuelito'],['Usaquén']], :include_blank => true %> 
 </div>
 <div class="field">
-      <%= f.label "Lugar" %>
+      <%= f.label "¿En qué lugar específico?" %>
       <%= f.text_field :address, placeholder: "Ejemplo: Calle 64 con Carrera 7a" %>
 </div>
 
 <div class="field field_date">
-  <%= f.label "Fecha y hora del incidente" %>
-  <%= f.datetime_select :date, ampm: true, :minute_step => 15, :start_year => Date.current.year, :end_year => Date.current.year + 2, order: [:day, :month, :year]  %>
+  <%= f.label "¿Fecha y hora del incidente?" %>
+  <%= f.date_select :date, :start_year => Date.current.year, :end_year => Date.current.year + 2, order: [:day, :month, :year]  %> 
+</div>
+
+
+<div class="field field_date">
+  <%= f.select :hour, [['12'], ['1'], ['2'], ['3'], ['4'], ['5'],['6'],['7'],['8'],['9'],['10'],['11']], :include_blank => true %>:
+  <%= f.select :minute, [['00'], ['15'], ['30'], ['45']], :include_blank => true %>
+  <%= f.select :ampm, [['AM'], ['PM']], :include_blank => true %>
 </div>
 
 <div class="field">
-      <%= f.label "Descripción"%>
+      <%= f.label "cuéntanos en detalle, ¿que pasó?"%>
       <%= f.text_area :description, placeholder: "Cuéntanos: ¿qué pasó?", :rows => "7"%>
 </div>
 

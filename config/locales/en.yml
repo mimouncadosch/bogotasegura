@@ -9,6 +9,17 @@ en:
     attributes:
       usuario:
         latitude: "Direccion:"
-  errors:
-    messages:
-      blank: "Por favor haz click en el lugar sobre el que quieres recibir reportes"
+        name: "Nombre:"
+        last_name: "Apellido:"
+        email_address: "Correo electrónico"
+        password: "Contraseña"
+        latitude: "Posición en el mapa:"
+      charater:
+        tipo: "Tipo de crimen:"
+        neighborhood: "Barrio:"
+        address: "Lugar específico:"
+        description: "Descripción"
+        latitude: "Posición en el mapa:"
+    errors:
+      messages:
+        blank: "Éste campo no puede estar vacio."

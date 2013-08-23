@@ -1,5 +1,13 @@
 class Charater < ActiveRecord::Base
-  attr_accessible :address, :date, :latitude, :longitude, :name, :tipo, :name, :description, :cedula, :neighborhood, :gmaps
+  attr_accessible :address, :date, :latitude, :longitude, :tipo, :name, :description, :cedula, :neighborhood, :gmaps, :hour, :minute, :ampm
+
+  validates :latitude, :presence => true
+  validates :tipo, :presence => true
+  validates :neighborhood, :presence => true
+  validates :address, :presence => true
+  validates :description, :presence => true
+  validates :date, :presence => true
+  
 
   #Gmaps4Rails
   acts_as_gmappable :latitude => 'lat', :longitude => 'lng', :process_geocoding => false,
@@ -11,6 +19,7 @@ class Charater < ActiveRecord::Base
       "<h5>#{address}</h5>"+
       "<h5>#{neighborhood}</h5>"+
       "<h5>#{date}</h5>"+
+      "<h5>#{hour}:#{minute} #{ampm}</h5>"+
       "<h6>#{description}</h6>"
     end
 
