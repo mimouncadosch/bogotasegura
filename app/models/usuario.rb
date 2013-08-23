@@ -15,7 +15,7 @@ class Usuario < ActiveRecord::Base
   validates :password, :presence => true,
                        :confirmation => true,
                        :length => { :within => 6..40 }
-
+  validates :latitude, :presence => true
 
 
 def create_remember_token

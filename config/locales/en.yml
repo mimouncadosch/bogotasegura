@@ -3,3 +3,12 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      usuario: usuario
+    attributes:
+      usuario:
+        latitude: "Direccion:"
+  errors:
+    messages:
+      blank: "Por favor haz click en el lugar sobre el que quieres recibir reportes"
