@@ -5424,6 +5424,9 @@ h2 {
   margin-left: 10%;
   margin-right: 10%;
 }
+.well h1 {
+  color: #3399CC;
+}
 .span4 {
   margin-left: 8%;
 }
@@ -5498,6 +5501,7 @@ h2 {
 .nav-tabs .li a:hover {
   color: #006699;
 }
+/* contact page */
 /* footer */
 .footer {
   margin-top: 200px;
@@ -5536,12 +5540,21 @@ h2 {
   margin-left: 10%;
 }
 /* email registration page */
-.email_reg_message .well {
-  width: 50px;
-  margin-left: 30%;
-}
 .email_reg_message b {
   color: #FF8000;
+}
+.email_reg_message p {
+  margin-left: 5%;
+}
+.email_reg_message h2 {
+  color: #0099CC;
+}
+.crime_list {
+  margin-left: 3%;
+}
+.crime_list ol {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #100000;
 }
 /* register page */
 .field {
@@ -6870,7 +6883,7 @@ ul.icons-ul > li .icon-li {
   padding-top: 0px;
   margin-top: 0px;
   padding-left: 0%;
-  margin-left: 0%;
+  margin-left: 10%;
 }
 
 #map2 img { max-width: none; }

@@ -13026,8 +13026,8 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
         type: "ROADMAP"
       };
       this.markers_conf = {
-        clusterer_gridSize: 50,
-        clusterer_maxZoom: 15,
+        clusterer_gridSize: 5,
+        clusterer_maxZoom: 8,
         custom_cluster_pictures: null,
         custom_infowindow_class: null
       };
