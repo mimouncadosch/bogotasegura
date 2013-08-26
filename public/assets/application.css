@@ -5556,6 +5556,13 @@ h2 {
   font-family: 'Julius Sans One', sans-serif;
   color: #100000;
 }
+.crime_list2 {
+  margin-left: 3%;
+}
+.crime_list2 ol {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #100000;
+}
 /* register page */
 .field {
   padding-left: 5%;

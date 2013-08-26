@@ -19,6 +19,8 @@ debut_light.png: debut_light.png
 debut_light/index.png: debut_light.png
 debut_light_@2X.png: debut_light_@2X.png
 debut_light_@2X/index.png: debut_light_@2X.png
+facebook.png: facebook.png
+facebook/index.png: facebook.png
 glyphicons-halflings-white.png: glyphicons-halflings-white.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white.png
 glyphicons-halflings.png: glyphicons-halflings.png
@@ -40,6 +42,8 @@ texture2.jpg: texture2.jpg
 texture2/index.jpg: texture2.jpg
 tweed_@2X.png: tweed_@2X.png
 tweed_@2X/index.png: tweed_@2X.png
+twitter.png: twitter.png
+twitter/index.png: twitter.png
 white_carbonfiber.png: white_carbonfiber.png
 white_carbonfiber/index.png: white_carbonfiber.png
 application.js: application.js
