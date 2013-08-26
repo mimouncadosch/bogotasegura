@@ -16,7 +16,8 @@
     <div class="tab-pane active crime_list2" id="tab1">
       <ul>
         <% for charater in @charaters %>
-          <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> km)</ol>
+          <ol><%= link_to charater.tipo, charater %> (<%= charater.distance.to_f.round(2) %> km) - <div class="reportado_hace">reportado hace <%=time_ago_in_words(charater.created_at)%></div></ol>
+          <hr>
         <% end %>
       </ul>
     </div>
