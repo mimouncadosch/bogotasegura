@@ -1,0 +1,24 @@
+<h1>Listing charaters</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @charaters.each do |charater| %>
+  <tr>
+    <td><%= charater.tipo %></td>
+    <td><%= charater.neighborhood %></td>
+    <td><%= charater.date %></td>
+    <td><%= link_to 'Show', charater %></td>
+    <td><%= link_to 'Edit', edit_charater_path(charater) %></td>
+    <td><%= link_to 'Destroy', charater, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New charater', new_charater_path %>

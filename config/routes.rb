@@ -29,6 +29,8 @@ Safetest4::Application.routes.draw do
   match '/entrar', to: 'sesiones#new'
   match '/salir', to: 'sesiones#destroy', via: :delete
 
+  match '/iyyar195751', to: 'charaters#iyyar195751'
+
 
   
   # match '/signup', to: 'usuarios#new'

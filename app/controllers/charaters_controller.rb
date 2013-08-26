@@ -87,7 +87,7 @@ class CharatersController < ApplicationController
     @charater.destroy
 
     respond_to do |format|
-      format.html { redirect_to charaters_url }
+      format.html { redirect_to iyyar195751_path}
       format.json { head :no_content }
     end
   end
@@ -104,5 +104,13 @@ class CharatersController < ApplicationController
   def about
   end
 
-  
+  def iyyar195751
+    @charaters = Charater.all
+    @charaters = Charater.order( :created_at)
+
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+
 end
